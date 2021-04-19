@@ -57,7 +57,7 @@ class EditarViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         text!.layer.borderWidth = 1
-        text!.layer.borderColor = UIColor.red.cgColor
+        text!.layer.borderColor = #colorLiteral(red: 0.983659327, green: 0.6143964529, blue: 0.9911581874, alpha: 0.7249186939)
         
         /// Cargamos la data de mi Nota en la Vista
         titulo.text = miNota?.titulo

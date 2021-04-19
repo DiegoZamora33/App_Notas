@@ -89,7 +89,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
             else
             {
-                print("Error Deleting...)
+                print("Error Deleting...")
             }
             
             tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)

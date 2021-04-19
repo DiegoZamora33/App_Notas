@@ -21,15 +21,27 @@
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconNotas" translatesAutoresizingMaskIntoConstraints="NO" id="Pqq-cL-ROW">
                                 <rect key="frame" x="87" y="384" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="IZ9-xU-dtJ"/>
+                                    <constraint firstAttribute="width" constant="240" id="wuJ-M6-cxo"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My iNotes App" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eG5-bg-cEL">
-                                <rect key="frame" x="147" y="536" width="163" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My iNotes App" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eG5-bg-cEL">
+                                <rect key="frame" x="125.5" y="527" width="163" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20.5" id="lsp-EZ-hrz"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="163" id="vZJ-d8-0HC"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zamora INC." textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="86h-gf-Ske">
-                                <rect key="frame" x="164" y="819" width="127" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zamora INC." textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="86h-gf-Ske">
+                                <rect key="frame" x="143.5" y="839" width="127" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="127" id="Gfv-2k-8IL"/>
+                                    <constraint firstAttribute="height" constant="18" id="hFW-7A-0cI"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -38,22 +50,17 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eG5-bg-cEL" secondAttribute="bottom" constant="290" id="0yt-ki-Z3R"/>
-                            <constraint firstItem="86h-gf-Ske" firstAttribute="top" secondItem="eG5-bg-cEL" secondAttribute="bottom" constant="247" id="7Iu-Xp-GQG"/>
+                            <constraint firstItem="eG5-bg-cEL" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="3oA-gM-8Y5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="86h-gf-Ske" secondAttribute="bottom" constant="5" id="5bv-UR-cvY"/>
                             <constraint firstItem="T4a-X5-xmz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7MG-bh-G1U"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="86h-gf-Ske" secondAttribute="bottom" constant="25" id="7Oc-2M-3cK"/>
-                            <constraint firstItem="Pqq-cL-ROW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="340" id="7pS-3P-YtV"/>
+                            <constraint firstItem="86h-gf-Ske" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="143.5" id="8ZB-yX-swk"/>
                             <constraint firstItem="T4a-X5-xmz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9dE-tM-35z"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pqq-cL-ROW" secondAttribute="trailing" constant="87" id="OIj-6d-UIu"/>
+                            <constraint firstItem="Pqq-cL-ROW" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="KJn-pP-xuL"/>
+                            <constraint firstItem="eG5-bg-cEL" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="89" id="PyK-fK-jH9"/>
+                            <constraint firstItem="Pqq-cL-ROW" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="WL2-pG-Iir"/>
                             <constraint firstItem="T4a-X5-xmz" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="beN-uO-2pZ"/>
-                            <constraint firstItem="eG5-bg-cEL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="147" id="beu-VN-dK5"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eG5-bg-cEL" secondAttribute="trailing" constant="104" id="gyW-Iq-SLz"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Pqq-cL-ROW" secondAttribute="bottom" constant="350" id="hj7-oh-Cxq"/>
-                            <constraint firstItem="Pqq-cL-ROW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="it0-Tw-GXa"/>
-                            <constraint firstItem="86h-gf-Ske" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="164" id="mLl-wb-VPj"/>
-                            <constraint firstItem="eG5-bg-cEL" firstAttribute="top" secondItem="Pqq-cL-ROW" secondAttribute="bottom" constant="24" id="pWR-Y2-2kM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="86h-gf-Ske" secondAttribute="trailing" constant="143.5" id="qVI-Tu-YnT"/>
                             <constraint firstAttribute="bottom" secondItem="T4a-X5-xmz" secondAttribute="bottom" id="vpr-H4-YOn"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="86h-gf-Ske" secondAttribute="trailing" constant="123" id="zdk-oj-1ck"/>
                         </constraints>
                     </view>
                 </viewController>
