@@ -10,9 +10,44 @@ import UIKit
 class EditarViewController: UIViewController {
     
     // MARK: - Conexiones y Variables Globales
+    @IBOutlet weak var titulo: UITextField!
     @IBOutlet weak var text: UITextView!
+    @IBOutlet weak var fecha: UILabel!
+    
     var miNota: Nota?
     var indexNota: Int?
+    
+    var myDatabase = UserDatabase()
+    var misNotas = [Nota]()
+    
+    // MARK: - Update Nota
+    @IBAction func updateNota(_ sender: UIButton) {
+        
+        /// Elimianmos mi nota vieja
+        misNotas.remove(at: indexNota!)
+        
+        /// Guardamos mi Nota
+        let date = Date()
+        let dateFormatter = DateFormatter()
+
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .short
+        
+        misNotas.append(Nota(titulo: titulo.text!, texto: text.text!, fecha: dateFormatter.string(from: date)))
+        
+        ///Guardado en UserDatabase
+        if myDatabase.saveAllObjects(allObjects: misNotas)
+        {
+            print("Saved Succesfully")
+        }
+        else
+        {
+            print("Error Saving...")
+        }
+        
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
 
     
     // MARK: - Overrides
@@ -23,6 +58,14 @@ class EditarViewController: UIViewController {
         
         text!.layer.borderWidth = 1
         text!.layer.borderColor = UIColor.red.cgColor
+        
+        /// Cargamos la data de mi Nota en la Vista
+        titulo.text = miNota?.titulo
+        text.text = miNota?.texto
+        fecha.text = miNota?.fecha
+        
+        /// Consultar DB
+        misNotas = myDatabase.getAllObjects()
     }
     
 

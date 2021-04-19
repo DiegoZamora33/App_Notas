@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A427910B262D450E00AA8BE1 /* Nota.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427910A262D450E00AA8BE1 /* Nota.swift */; };
+		A4689EF6262E019A0066E1A9 /* UserDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4689EF5262E019A0066E1A9 /* UserDatabase.swift */; };
 		A4B08DA1262CC618009CCB17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B08DA0262CC618009CCB17 /* AppDelegate.swift */; };
 		A4B08DA3262CC618009CCB17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B08DA2262CC618009CCB17 /* SceneDelegate.swift */; };
 		A4B08DA5262CC618009CCB17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B08DA4262CC618009CCB17 /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		A427910A262D450E00AA8BE1 /* Nota.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nota.swift; sourceTree = "<group>"; };
+		A4689EF5262E019A0066E1A9 /* UserDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDatabase.swift; sourceTree = "<group>"; };
 		A4B08D9D262CC618009CCB17 /* My iNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My iNotes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4B08DA0262CC618009CCB17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4B08DA2262CC618009CCB17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				A4D63A68262D2CA9007050A2 /* AgregarViewController.swift */,
 				A4D63A6D262D357C007050A2 /* EditarViewController.swift */,
 				A427910A262D450E00AA8BE1 /* Nota.swift */,
+				A4689EF5262E019A0066E1A9 /* UserDatabase.swift */,
 			);
 			path = "My iNotes";
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				A4B08DA1262CC618009CCB17 /* AppDelegate.swift in Sources */,
 				A4D63A69262D2CA9007050A2 /* AgregarViewController.swift in Sources */,
 				A4B08DA3262CC618009CCB17 /* SceneDelegate.swift in Sources */,
+				A4689EF6262E019A0066E1A9 /* UserDatabase.swift in Sources */,
 				A427910B262D450E00AA8BE1 /* Nota.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

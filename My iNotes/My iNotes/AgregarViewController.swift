@@ -8,11 +8,10 @@
 import UIKit
 
 class AgregarViewController: UIViewController {
-    
     // MARK: - Conexiones y Variables Globales
     @IBOutlet weak var text: UITextView!
     
-    let myDefaultDB = UserDefaults.standard
+    var myDatabase = UserDatabase()
     var misNotas = [Nota]()
     
     
@@ -37,9 +36,15 @@ class AgregarViewController: UIViewController {
 
             misNotas.append(Nota(titulo: miTextField.text!, texto: text.text!, fecha: dateFormatter.string(from: date)))
             
-            myDefaultDB.set(misNotas, forKey: "notas")
-            
-            print(misNotas)
+            ///Guardado en UserDatabase
+            if myDatabase.saveAllObjects(allObjects: misNotas)
+            {
+                print("Saved Succesfully")
+            }
+            else
+            {
+                print("Error Saving...")
+            }
             
             navigationController?.popToRootViewController(animated: true)
         }
@@ -59,6 +64,8 @@ class AgregarViewController: UIViewController {
         
     }
     
+    
+    // MARK: - Overries, Protocolos y Delegados
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -67,17 +74,7 @@ class AgregarViewController: UIViewController {
         text!.layer.borderColor = UIColor.red.cgColor
         
         /// Consultar DB
-        if myDefaultDB.array(forKey: "notas") != nil
-        {
-            misNotas = myDefaultDB.array(forKey: "notas") as! [Nota]
-        }
-        else
-        {
-            misNotas = []
-        }
-        
-        print(misNotas)
+        misNotas = myDatabase.getAllObjects()
+
     }
-
-
 }

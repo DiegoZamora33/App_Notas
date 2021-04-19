@@ -12,7 +12,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // MARK: - Conexiones y Variables
     @IBOutlet weak var miTabla: UITableView!
     
-    let myDefaultDB = UserDefaults.standard
+    var myDatabase = UserDatabase()
     var misNotas = [Nota]()
     var indexNota: Int?
     var miNota: Nota?
@@ -27,16 +27,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         miTabla.dataSource = self
         
         /// Consultar DB
-        if myDefaultDB.array(forKey: "notas") != nil
-        {
-            misNotas = myDefaultDB.array(forKey: "notas") as! [Nota]
-        }
-        else
-        {
-            misNotas = []
-        }
-        
-        print(misNotas)
+        misNotas = myDatabase.getAllObjects()
     }
     
     
@@ -78,13 +69,31 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let objEditar = segue.destination as! EditarViewController
             
             objEditar.miNota = miNota
+            objEditar.indexNota = indexNota
         }
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        misNotas = myDatabase.getAllObjects()
         miTabla.reloadData()
-        print("pear")
-        print(misNotas)
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+            
+            misNotas.remove(at: indexPath.row)
+            
+            if myDatabase.saveAllObjects(allObjects: misNotas)
+            {
+                print("Deleted Succesfully")
+            }
+            else
+            {
+                print("Error Deleting...)
+            }
+            
+            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+        }
     }
 }
 
